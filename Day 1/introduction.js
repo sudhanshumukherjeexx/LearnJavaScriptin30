@@ -1,0 +1,1 @@
+console.log("Hello World, This is External Script for 30 Days of JavaScript.")
