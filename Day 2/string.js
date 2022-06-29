@@ -164,6 +164,7 @@ console.log(string1.match(/right/i))
 console.log(string1.match('loving'))
 console.log(string1.match(/JavaScript/gi))
 
+// [^a-zA-Z ] - All special characters
 // d with escape character means d not a normal d instead acts a digit
 // + means one or more digit numbers,
 // if there is g after that it means global, search everywhere.

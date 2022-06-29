@@ -70,4 +70,32 @@ console.log(ex_12.indexOf('because'))
 console.log(ex_12.lastIndexOf('because'))
 console.log(ex_12.substr(31, 23))
 
+//Exercise - Level 3
 
+let lvl3_1 = "Love is the best thing in this world. Some found their love and some are still looking for their love."
+console.log(lvl3_1.split(/love/gi).length-1)
+
+let lvl3_2 = "You cannot end a sentence with because because because is a conjunction"
+let count = lvl3_2.match(/because/gi)
+console.log(count)
+
+const sentence = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching'
+
+const clean_sentence = sentence.replace(/[^a-zA-z0-9]/g, '')
+console.log(clean_sentence)
+
+let lvl3_4 = 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
+
+//Method 1
+let lvl3_split = lvl3_4.split(' ')
+let sal_month = lvl3_split[2]
+let sal_bonus= lvl3_split[8]
+let sal_course = lvl3_split[12]        
+let total_income = Number(sal_month) + Number(sal_bonus) + Number(sal_course)
+console.log(total_income)
+
+//Method 2
+
+const sal_list = lvl3_4.match(/\d+/g)
+const total_income1 = +sal_list[0] + +sal_list[1] + +sal_list[2]
+console.log(total_income1)
